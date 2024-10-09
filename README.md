@@ -72,4 +72,3 @@ cargo build
 ## License
 
 This project is licensed under the same terms as the Mosfhet library. See [LICENSE](https://github.com/antoniocgj/MOSFHET/blob/main/LICENSE) for more details.
-```
