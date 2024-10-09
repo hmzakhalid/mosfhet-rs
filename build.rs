@@ -25,7 +25,7 @@ fn main() {
             "mosfhet/src/trlwe_compressed.c",
         ])
         .flag_if_supported("-mrdrnd")
-        .flag_if_supported("-mavx")    // Enable AVX instructions
+        .flag_if_supported("-mavx")    
         .flag_if_supported("-mavx2")
         .flag_if_supported("-Wno-sign-compare")
         .compile("mosfhet");
@@ -33,9 +33,9 @@ fn main() {
     // Generate bindings with bindgen
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
-        .allowlist_function(".*")  // You can restrict this to the specific functions you want.
-        .allowlist_type(".*")      // Same for types.
-        .clang_arg("-Imosfhet/include")  // Include the directory containing your headers.
+        .allowlist_function(".*") 
+        .allowlist_type(".*")      
+        .clang_arg("-Imosfhet/include")  
         .generate()
         .expect("Unable to generate bindings");
 
